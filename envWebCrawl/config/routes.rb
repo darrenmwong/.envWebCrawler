@@ -1,4 +1,10 @@
 EnvWebCrawl::Application.routes.draw do
+    resources :main
+
+root to: "main#index"
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
