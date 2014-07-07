@@ -3,6 +3,7 @@ EnvWebCrawl::Application.routes.draw do
 
 root to: "main#index"
 
+get  '/search' => 'main#search'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
