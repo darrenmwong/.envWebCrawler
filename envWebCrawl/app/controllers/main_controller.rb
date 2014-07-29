@@ -7,8 +7,7 @@ end
 
 def search
   @link = params[:github]
-  puts @link
-  Hard_worker.perform_async('Something_here', 5)
+  Hardworker.perform_async(@link, 1)
   render "/main/results"
 end
 
