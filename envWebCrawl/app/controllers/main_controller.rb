@@ -7,7 +7,9 @@ end
 
 def search
   @link = params[:github]
-  Hardworker.perform_async(@link, 1)
+  @github_doc = Nokogiri::HTML(Typhoeus.get(@link).body)
+  puts @github_doc
+  # Hardworker.perform_async(@link, 1)
   render "/main/results"
 end
 
