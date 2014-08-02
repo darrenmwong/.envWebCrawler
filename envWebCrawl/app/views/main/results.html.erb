@@ -1,3 +1,10 @@
 This is where results go
+<br>
 <!-- Shows body of github -->
-<%= @gitRepo.css('li.public' ) %>
+<% @gitRepo.each do |x| %>
+
+  <%= x.search('a') %>
+  <br>   
+
+<% end -%>
+

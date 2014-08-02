@@ -3,7 +3,6 @@ class MainController < ApplicationController
 require 'open-uri'
 
 def index
-  
 end
 
 
@@ -15,6 +14,8 @@ def search
   github_doc = Nokogiri::HTML(open(gitLink))
   #Search specific class traverse down to repository links
   @gitRepo = github_doc.search('.repo-tab')
+  #Get every a tag source from the repo tab
+  # @gitSources = @gitRepo.search('a')
   # Hardworker.perform_async(@link, 1)
   render "/main/results"
 end
